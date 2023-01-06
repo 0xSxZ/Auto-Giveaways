@@ -1,0 +1,150 @@
+<!-- Banner -->
+
+<style type="text/css">
+  /* Webpixels CSS */
+/* Utility and component-centric Design System based on Bootstrap for fast, responsive UI development */
+/* URL: https://github.com/webpixels/css */
+
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+/* Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+</style>
+
+<script type="text/javascript">
+  const { ipcRenderer } = require('electron')
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+</script>
+<!-- Dashboard -->
+<div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+
+    <!-- Main content -->
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+        <!-- Header -->
+        <header class="bg-surface-primary border-bottom pt-6">
+
+
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <img src="img/logo.png" class="h2 mb-0 ls-tight" style="width: 10%;">
+                            
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="col-sm-6 col-12 text-sm-end">
+                            <div class="mx-n1">
+
+                                <button onclick="window.close()" target="_blank"class="btn d-inline-flex btn-sm btn-primary mx-1">
+
+                                    <span>Quit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link active"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="py-6 bg-surface-secondary">
+            <div class="container-fluid">
+
+                <h4 style="font-size: 130%;" class="h2 mb-0 ls-tight" id="tokensnum"></h4>
+                <script type="text/javascript">document.getElementById("tokensnum").innerHTML = "Loaded : "+  ipcRenderer.sendSync('synchronous-message', 'GetToks') + " Tokens";</script>
+                <br>
+                <!-- Card stats -->
+                <div class="row g-6 mb-6">
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Joined</span>
+                                        <span class="h3 font-bold mb-0" id="joined">0</span>
+
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                          <i class="bi bi-arrow-down-square-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Won</span>
+                                        <span class="h3 font-bold mb-0" id="won">0</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                            <i class="bi bi-trophy-fill"></i>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Win %</span>
+                                        <span class="h3 font-bold mb-0" id="winpercent">0%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                            <i class="bi bi-percent"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                     
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+async function f(){
+  var ic = ipcRenderer.sendSync('synchronous-message', 'ping')
+  document.getElementById("joined").innerHTML = ic[0];
+  document.getElementById("won").innerHTML = ic[1];
+  document.getElementById("winpercent").innerHTML = ic[2] + " %";
+  console.log(ic)
+}
+setInterval(function(){ 
+    f()
+}, 5000);
+
+
+  </script>}

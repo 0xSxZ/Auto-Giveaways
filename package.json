@@ -1,0 +1,46 @@
+{
+  "name": "AutoG",
+  "author": "Yazid",
+  "version": "0.0.1",
+  "build": {
+    "files": "!config.json",
+    "asar": false
+  },
+  "dependencies": {
+    "@nodegui/nodegui": "^0.57.3",
+    "2captcha": "^3.0.5",
+    "authgg-admin-api": "^1.0.3",
+    "colors": "^1.4.0",
+    "discord-info": "^0.0.1",
+    "discord-inv": "^2.0.0",
+    "discord-password-login": "^1.1.0",
+    "discord-webhook-node": "^1.1.8",
+    "discord.js-selfbot": "^12.0.2",
+    "discord.js-selfbot-v13": "^2.9.15",
+    "discordtokeninfos": "^1.0.8",
+    "electron": "^22.0.0",
+    "electron-root-path": "^1.1.0",
+    "eris": "^0.17.1",
+    "html": "^1.0.0",
+    "keyauth": "^1.0.3",
+    "node-emoji": "^1.11.0",
+    "node-fetch": "^2.0.0",
+    "node-file-dialog": "^1.0.3",
+    "node-hide-console-window": "^2.1.1",
+    "prompt-sync": "^4.2.0",
+    "qs": "^6.11.0",
+    "remote": "^0.2.6",
+    "request": "^2.88.2",
+    "retus": "^1.1.2",
+    "sync-fetch": "^0.4.2",
+    "sync-request": "^6.1.0",
+    "uuid": "^9.0.0",
+    "vm2": "^3.9.13"
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron index.js",
+    "pack": "build --dir",
+    "dist": "build"
+  }
+}
