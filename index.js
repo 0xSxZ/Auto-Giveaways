@@ -37,12 +37,7 @@ var clients = []
 const client = new Client({
    checkUpdate: false,
 });
-const KeyAuth = require('./KeyAuth');
-const KeyAuthApp = new KeyAuth("NL", // Application Name
-   "4lhXrF1CCQ", // OwnerID
-   "2eaddbacbbd06925ef17bae04b3da3396574c4ad5812d7cdd8d30e7cf2904087", // Application Secret
-   "1.0" // Application Version
-);
+
 var botUserIDs = [];
 var lic;
 
