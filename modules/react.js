@@ -99,7 +99,6 @@ async function check(author, result, message, joined, won, webhook, webhookWin, 
   
 
   
-  const webhookUrl = "https://discord.com/api/webhooks/1054103774840508487/eaeGo3_CG2ldGIEcyBNWbN9-esoNDy2h88E_82D_11oo249_Wk3U6wuQGjBC8sb4PUoQ"
 
    
    
