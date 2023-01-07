@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is basicaly a bot that joins giveaway 4 u and alert you when you win (@everyone and all my G)
+This is basicaly a bot that joins discord giveaway 4 u with multiple tokens and alert you when you win (@everyone and all my G)
 
 
 ### Installation
