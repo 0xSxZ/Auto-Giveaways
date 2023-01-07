@@ -10,9 +10,9 @@ _Don't be dumb pls_
 
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/0xSxZ/Auto-Giveaways.git
-   ```
+```sh
+git clone https://github.com/0xSxZ/Auto-Giveaways.git
+```
 69. Install NPM packages
    ```sh
    npm install
