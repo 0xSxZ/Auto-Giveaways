@@ -29,10 +29,14 @@ git clone https://github.com/0xSxZ/Auto-Giveaways.git
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] IDK
-- [x] IDK
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Multi token support
+- [x] Discord webhook alerts
+- [x] Undetected by discord
+- [x] And much more...
+
+Supported bots :
+- Giveaway Bot
+- Draftbot
+- Giveaway Boat
+- Apollo
+- Santa Lunar
